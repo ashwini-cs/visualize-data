@@ -1,4 +1,6 @@
-from django.conf.urls import patterns, url
+from django.urls import path
+from . import views
 
-urlpatterns = patterns('agri_data.views',
-                       url(r'^store-data$', 'store'),
+urlpatterns = [
+    path('data', views.index),
+]
